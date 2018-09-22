@@ -12,7 +12,7 @@ const ToppingForm = (props) => {
               type="checkbox"
               value="Mild Hot Sauce"
               name="toppings"
-              onChange={props.handleChange}
+              onChange={props.handleOnChange}
             />
             <img src={require('../images/toppings/mild.png')} height="100px" width="100px" alt="mild hot sauce" />
             <label htmlFor="mild">Mild Hot Sauce</label>
@@ -26,7 +26,7 @@ const ToppingForm = (props) => {
               type="checkbox"
               value="Medium Hot Sauce"
               name="toppings"
-              onChange={props.handleChange}
+              onChange={props.handleOnChange}
             />
             <img src={require('../images/toppings/medium.png')} height="100px" width="100px" alt="medium hot sauce" />
             <label htmlFor="medium">Medium Hot Sauce</label>
@@ -40,7 +40,7 @@ const ToppingForm = (props) => {
               type="checkbox"
               value="HOT Hot Sauce"
               name="toppings"
-              onChange={props.handleChange}
+              onChange={props.handleOnChange}
             />
             <img src={require('../images/toppings/hot.png')} height="100px" width="100px" alt="hot sauce" />
             <label htmlFor="hot">HOT Hot Sauce</label>
@@ -54,7 +54,7 @@ const ToppingForm = (props) => {
               type="checkbox"
               value="Corn Salsa"
               name="toppings"
-              onChange={props.handleChange}
+              onChange={props.handleOnChange}
             />
             <img src={require('../images/toppings/corn-salsa.png')} height="100px" width="100px" alt="corn salsa" />
             <label htmlFor="corn">Corn Salsa</label>
@@ -68,7 +68,7 @@ const ToppingForm = (props) => {
               type="checkbox"
               value="Sour Cream"
               name="toppings"
-              onChange={props.handleChange}
+              onChange={props.handleOnChange}
             />
             <img src={require('../images/toppings/sour-cream.png')} height="100px" width="100px" alt="sour cream" />
             <label htmlFor="sour cream">Sour Cream</label>
@@ -82,7 +82,7 @@ const ToppingForm = (props) => {
               type="checkbox"
               value="Lettuce"
               name="toppings"
-              onChange={props.handleChange}
+              onChange={props.handleOnChange}
             />
             <img src={require('../images/toppings/lettuce.png')} height="100px" width="100px" alt="lettuce" />
             <label htmlFor="lettuce">Lettuce</label>
@@ -96,7 +96,7 @@ const ToppingForm = (props) => {
               type="checkbox"
               value="Guac"
               name="toppings"
-              onChange={props.handleChange}
+              onChange={props.handleOnChange}
             />
             <img src={require('../images/toppings/guac.png')} height="100px" width="100px" alt="guacamole" />
             <label htmlFor="guac">Guac</label>
@@ -110,7 +110,7 @@ const ToppingForm = (props) => {
               type="checkbox"
               value="Cheese"
               name="toppings"
-              onChange={props.handleChange}
+              onChange={props.handleOnChange}
             />
             <img src={require('../images/toppings/cheese.png')} height="100px" width="100px" alt="cheese" />
             <label htmlFor="cheese">Cheese</label>
