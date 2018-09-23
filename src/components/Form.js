@@ -12,12 +12,18 @@ const DEFAULT_STATE = {
 }
 
 class Form extends Component {
-  state = {
+
+  constructor(props){
+
+    super(props)
+
+    this.state = {
     ...DEFAULT_STATE
   }
-
-  handleSubmit() {
+}
+  handleSubmit = (event) =>  {
     event.preventDefault()
+
     document.getElementById("order-form").reset()
     this.props.addOrder(this.state)
     this.setState({
@@ -25,7 +31,7 @@ class Form extends Component {
     })
   }
 
-  handleChange() {
+  handleChange = (event) => {
     const itemType = event.target.name
     const item = event.target.value
 
@@ -42,21 +48,24 @@ class Form extends Component {
   }
 
   render() {
+
+    console.log(this.state)
+
     return(
       <div className="ui raised container segment">
         <h1 className="ui block header">Order Form</h1>
         <form className="ui form" id="order-form" onSubmit={this.handleSubmit}>
-          <ProteinForm handleOnChange={this.handleChange} />
+          <ProteinForm handleChange={this.handleChange} />
 
-          <FillingForm handleOnChange={this.handleChange} />
+          <FillingForm handleChange={this.handleChange} orders={this.props.orders} />
 
-          <ToppingForm handleOnChange={this.handleChange} />
+          <ToppingForm handleChange={this.handleChange} />
 
-          <SideForm handleOnChange={this.handleChange} />
+          <SideForm handleChange={this.handleChange} />
 
           <br />
 
-          <button className="ui blue big button" type="submit">Submit</button>
+          <button  onClick={this.handleSubmit} className="ui blue big button"  type="submit">Submit</button>
         </form>
       </div>
     )
